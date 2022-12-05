@@ -1,9 +1,9 @@
-package mx.com.gm.thymeleaf;
+package mx.com.gm.thymeleaf.web;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Value;
+// import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,12 +16,13 @@ import mx.com.gm.thymeleaf.domain.Persona;
 @Slf4j
 public class ControladorInicio {
 
-    @Value("${index.saludo}")
-    private String saludo;    
+    // @Value("${index.saludo}")
+    // private String saludo;    
 
     @GetMapping("/")
     public String inicio(Model model) {    
         var mensaje = "Hola hola con thymeleaf";
+
         var persona = new Persona();
         persona.setNombre("Gabriel");
         persona.setApellido("Sanchez");
@@ -42,7 +43,7 @@ public class ControladorInicio {
         // model.addAttribute("persona", persona);
         model.addAttribute("personas", personas);
         model.addAttribute("mensaje", mensaje);
-        model.addAttribute("saludo", saludo);
+        // model.addAttribute("saludo", saludo);
         return "index";
     }
 

@@ -1,0 +1,45 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch ExampleApplication",
+            "request": "launch",
+            "mainClass": "com.example.example.ExampleApplication",
+            "projectName": "example"
+        },
+        {
+            "type": "java",
+            "name": "Launch DemoApplication",
+            "request": "launch",
+            "mainClass": "com.example.demo.DemoApplication",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestdbApplication",
+            "request": "launch",
+            "mainClass": "com.test.testdb.TestdbApplication",
+            "projectName": "testdb"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DatajpaApplication<datajpa>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.data.main.datajpa.DatajpaApplication",
+            "projectName": "datajpa",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PostgredataApplication<postgredata>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "cr.data.postgredata.PostgredataApplication",
+            "projectName": "postgredata",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

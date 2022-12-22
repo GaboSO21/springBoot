@@ -10,25 +10,25 @@
 
 <body>
 
-    <div>
-        <table border="1">
-            <th>Id</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Correo</th>
-            <th>Telefono</th>
+    <h1>
+        Inicio
+    </h1>
 
-            <tr th:each="persona : ${personas}">
-                <td th:text="${persona.id_persona}">...</td>
-                <td th:text="${persona.nombre}">...</td>
-                <td th:text="${persona.apellido}">...</td>
-                <td th:text="${persona.email}">...</td>
-                <td th:text="${persona.telefono}">...</td>
-            </tr>
+    <hr>
+
+    <ul>
+        <li> <a th:href="@{/listar}">Listar Personas</a> </li> 
+        <li> <a th:href="@{/agregar}">Crear Persona</a> </li>
+    </ul>
+
+    <hr>
+    <br>
+    <code>
+        Bienvenido a mi pagina demo de Spring Boot! :))
+    </code>
+    <hr>
 
 
-        </table>
-    </div>
 
 </body>
 

@@ -4,7 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import cr.webapp.thexample.repository.PersonaRepository;
 import cr.webapp.thexample.service.PersonaService;
 
 @Controller

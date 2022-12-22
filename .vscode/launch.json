@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MysqldemoApplication",
+            "request": "launch",
+            "mainClass": "com.mysql.mysqldemo.MysqldemoApplication",
+            "projectName": "mysqldemo"
+        },
+        {
+            "type": "java",
             "name": "Launch ThexampleApplication",
             "request": "launch",
             "mainClass": "cr.webapp.thexample.ThexampleApplication",

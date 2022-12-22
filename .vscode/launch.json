@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ThexampleApplication",
+            "request": "launch",
+            "mainClass": "cr.webapp.thexample.ThexampleApplication",
+            "projectName": "thexample"
+        },
+        {
+            "type": "java",
             "name": "Launch ExampleApplication",
             "request": "launch",
             "mainClass": "com.example.example.ExampleApplication",

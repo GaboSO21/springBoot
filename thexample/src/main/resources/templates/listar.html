@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar</title>
+</head>
+
+<body>
+    <h1>
+        Listar personas
+    </h1>
+
+    <hr>
+    <ul>
+        <li><a href="/">Volver</a></li>
+    </ul>
+    <hr>
+
+    <br>
+    <div th:if="${personas != null}">
+        <table border="1">
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+
+            <tr th:each="persona : ${personas}">
+                <td th:text="${persona.id}">...</td>
+                <td th:text="${persona.nombre}">...</td>
+                <td th:text="${persona.apellido}">...</td>
+                <td th:text="${persona.correo}">...</td>
+                <td th:text="${persona.telefono}">...</td>
+                <td><a th:href="@{/editar/} + ${persona.id}" th:text="Editar"></a></td>
+                <td><a th:href="@{/eliminar/} + ${persona.id}" th:text="Eliminar"></a></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div th:if="${personas == null}">
+        <code>
+            Lista vacia.
+        </code>
+    </div>
+
+</body>
+
+</html>

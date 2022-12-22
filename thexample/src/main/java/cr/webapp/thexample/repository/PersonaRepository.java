@@ -1,7 +1,7 @@
 package cr.webapp.thexample.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
 import cr.webapp.thexample.domain.Persona;
 
-public interface PersonaRepository extends JpaRepository<Persona, Long> {}
+public interface PersonaRepository extends CrudRepository<Persona, Long> {}

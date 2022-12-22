@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar</title>
+</head>
+<body>
+    
+   <h1>
+    Agregar
+   </h1>
+
+   <hr>
+   <ul>
+    <li><a href="/">Volver</a></li>
+   </ul>
+   <hr>
+
+   <div>
+
+    <form th:action="@{/guardar}" method="post" th:object="${persona}" >
+
+        <input type="hidden" name="id" th:field="*{id}">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" th:field="*{nombre}">
+        <br>
+        <label for="apellido">Apellidos: </label>
+        <input type="text" name="apellido" th:field="*{apellido}">
+        <br>
+        <label for="correo">Correo: </label>
+        <input type="text" name="correo" th:field="*{correo}">
+        <br>
+        <label for="telefono">Telefono: </label>
+        <input type="text" name="telefono" th:field="*{telefono}">
+        <br>
+        <br>
+        <input type="submit" name="guardar" value="Guardar">
+
+    </form>
+
+   </div>
+
+</body>
+</html>

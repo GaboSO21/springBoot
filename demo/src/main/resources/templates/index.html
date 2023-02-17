@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+
+<body>
+
+    <header id="header" th:replace="layout/plantilla :: header"></header>
+
+    <div>
+
+        <ul>
+            <li>
+                <a th:href="@{/listar}">Listar libros</a>
+            </li>
+            <li>
+                <a th:href="@{/agregar}">Agregar libros</a>
+            </li>
+        </ul>
+
+        <hr>
+        <code>
+        Pagina de practica con SpringBoot.
+    </code>
+
+    </div>
+
+    <footer th:replace="layout/plantilla :: footer"></footer>
+
+</body>
+
+</html>

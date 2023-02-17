@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar</title>
+</head>
+
+<body>
+    <h1>
+        Listar
+    </h1>
+    <hr>
+
+    <ul>
+        <li>
+            <a href="/">Volver</a>
+        </li>
+    </ul>
+
+    <hr>
+    <div th:if="${!libros.isEmpty}">
+
+        <table border="20">
+
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Autor</th>
+            <th>Editorial</th>
+            <th>Anno</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+
+            <tr th:each="libro : ${libros}">
+
+                <td th:text="${libro.id}"></td>
+                <td th:text="${libro.nombre}"></td>
+                <td th:text="${libro.autor}"></td>
+                <td th:text="${libro.editorial}"></td>
+                <td th:text="${libro.anno}"></td>
+                <td><a th:href="@{/editar/} + ${libro.id}" th:text="Editar"></a></td>
+                <td><a th:href="@{/eliminar/} + ${libro.id}" th:text="Eliminar"></a></td>
+
+            </tr>
+
+
+        </table>
+
+    </div>
+
+    <div th:if="${libros.isEmpty}">
+        <code>
+        No hay datos en la tabla
+        </code>
+    </div>
+</body>
+
+</html>

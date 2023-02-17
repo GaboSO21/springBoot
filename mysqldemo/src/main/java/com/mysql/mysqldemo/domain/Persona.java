@@ -1,6 +1,8 @@
 package com.mysql.mysqldemo.domain;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 
 import lombok.Data;
 
@@ -12,7 +14,14 @@ public class Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_persona;
-    private String nombre, apellido, email, telefono;
+    @NotEmpty
+    private String nombre;
+    @NotEmpty
+    private String apellido;
+    @NotEmpty
+    @Email
+    private String email;
+    private String telefono;
 
     public Persona() {
     }
